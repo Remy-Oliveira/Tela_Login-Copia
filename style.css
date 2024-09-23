@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.god {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Define a altura do contêiner como 100% da altura da janela */
+    position: relative;
+    /* Para permitir que as divs internas usem o posicionamento absoluto */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.942);
+}
+
+.formulario-login,
+.formulario-cadastro {
+    position: absolute;
+    height: 600px;
+    width: 350px;
+    background-color: #b2cae4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .8s, opacity 0.8s;
+}
+
+.formulario-cadastro {
+    opacity: 0;
+    transform: translateX(-300%)
+}
+
+.formulario-login input,
+.formulario-cadastro input {
+    margin: 5px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+
+}
+
+.botao-entrar {
+    position: absolute;
+    background-color: #6696c8;
+    bottom: 120px;
+    width: 50%;
+    border: none;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.botao-entrar:hover {
+    background-color: #5b9bdf;
+}
+
+input:focus {
+    outline: none;
+    /* Remove o contorno ao focar */
+
+}
+
+#alternate:checked~.formulario-cadastro {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#alternate:checked~.formulario-login {
+    opacity: 0;
+    transform: translateX(-300%);
+}
+
+.alternar {
+    position: absolute;
+    bottom: 65px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.title {
+    position: absolute;
+    top: 140px;
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+i {
+    font-size: 2rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#alternate {
+    display: none;
+}
+
+i:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 140px;
+    border: none;
+
+}
+
+
+i:nth-child(2) {
+    position: relative;
+    left: 150px;
+    font-size: 120px;
+    border: none;
+}
